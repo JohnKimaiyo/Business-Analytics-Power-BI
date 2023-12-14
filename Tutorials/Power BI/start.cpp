@@ -8,3 +8,9 @@ Film Length = IF(
     "Long",
     "Short"
  )
+
+
+ Average Profit Loss = AVERAGEX(
+Movies,
+Movies[Box Office] - Movies[Budget]
+)
