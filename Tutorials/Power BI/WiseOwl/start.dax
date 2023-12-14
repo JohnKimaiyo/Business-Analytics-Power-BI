@@ -31,3 +31,14 @@ Movies[Oscar Wins]>= 1
 Oscar Losers = CALCULATETABLE(Movies,Movies[Oscar Wins] = 0)
 
 All Films = UNION('Oscar Losers', 'Oscar Wins') 
+
+
+Avg Profit Loss vs Seelctor Genre = VAR SelectedGenre = SELECTEDVALUE('Genre Picker'[Genre])
+
+VAR AvgProfitLossSelectedGenre = CALCULATE(
+    AVERAGE(Movie[Profit Loss]),
+    Movie[Genre] = SelectedGenre
+)
+
+VAR AvgProfitLossDifference = AVERAGE(Movies(Movies[Profit Loss]) - AvgProfitLossSelectedGenre
+RETURN AvgProfitLossDifference
