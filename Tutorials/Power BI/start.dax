@@ -14,3 +14,11 @@ Film Length = IF(
 Movies,
 Movies[Box Office] - Movies[Budget]
 )
+
+
+Average Profit Loss Long Films = AVERAGEX(
+FILTER(
+    Movies,
+    Movies[Run Time] > 120)
+,
+ Movies[Box Office] - Movies[Budget])
