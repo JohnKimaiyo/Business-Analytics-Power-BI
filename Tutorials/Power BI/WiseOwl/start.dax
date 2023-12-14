@@ -27,3 +27,5 @@ FILTER(
 Movies,
 Movies[Oscar Wins]>= 1
 ) 
+
+Oscar Losers = CALCULATETABLE(Movies,Movies[Oscar Wins] = 0)
