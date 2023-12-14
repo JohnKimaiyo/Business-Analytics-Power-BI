@@ -22,3 +22,8 @@ FILTER(
     Movies[Run Time] > 120)
 ,
  Movies[Box Office] - Movies[Budget])
+
+ Oscar Wins = FILTER(
+Movies,
+Movies[Oscar Wins]>= 1
+) 
