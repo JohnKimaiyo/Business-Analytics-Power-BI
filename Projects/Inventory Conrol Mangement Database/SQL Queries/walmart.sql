@@ -16,3 +16,17 @@ SELECT TOP (1000) [Store]
       ,[Unemployment]
   FROM [Walmart Sales].[dbo].[Walmart$]
   ORDER BY Weekly_Sales;
+
+
+  /****** Do the sales always rise near the holiday season for all the years?  ******/
+SELECT TOP (1000) [Store]
+      ,[Date]
+      ,[Weekly_Sales]
+      ,[Holiday_Flag]
+      ,[Temperature]
+      ,[Fuel_Price]
+      ,[CPI]
+      ,[Unemployment]
+	   
+  FROM [Walmart Sales].[dbo].[Walmart$]
+ WHERE  Holiday_Flag > 0
