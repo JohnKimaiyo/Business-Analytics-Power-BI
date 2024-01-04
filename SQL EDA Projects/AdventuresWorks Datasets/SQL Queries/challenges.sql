@@ -19,3 +19,10 @@ SELECT Title,COUNT(Distinct[EmployeeNationalIDAlternateKey]) As_Emplyee_count
   FROM [AdventureWorksDW2022].[dbo].[DimEmployee]
   GROUP BY Title
   Order By As_Emplyee_count DESC;
+
+  -- whcih departmentest have the most employees --
+  /****** Script for SelectTopNRows command from SSMS  ******/
+SELECT [DepartmentName],COUNT(DISTINCT [EmployeeNationalIDAlternateKey]) As_Employee_Number
+  FROM [AdventureWorksDW2022].[dbo].[DimEmployee]
+  GROUP BY DepartmentName
+  Order BY As_Employee_Number DESC;
