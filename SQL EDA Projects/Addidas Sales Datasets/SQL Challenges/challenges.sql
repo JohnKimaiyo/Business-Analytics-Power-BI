@@ -6,9 +6,6 @@ SELECT Region ,COUNT(DISTINCT [Retailer ID]) As_Retailer_Count
   GROUP BY Region
   Order BY As_Retailer_Count Desc;
 
-
-
-
 -- which  State  had the most retailers ---
 
 SELECT State,COUNT([Retailer ID]) AS Retailler_Count
@@ -19,17 +16,24 @@ SELECT State,COUNT([Retailer ID]) AS Retailler_Count
   ORDER BY Retailler_Count Desc;
 
 
--- which  Producs had the most retailers ---
+-- which  Products had the most retailers ---
 
-/****** Script for SelectTopNRows command from SSMS  ******/
+
 SELECT Product,COUNT(DISTINCT [Retailer ID]) AS_Retail_Count
   FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
   GROUP BY Product
   ORDER BY AS_Retail_Count DESC;
 -- which  Sales method  had the most retailers ---
-/****** Script for SelectTopNRows command from SSMS  ******/
+
 SELECT [Sales Method],COUNT(DISTINCT [Retailer ID]) As_Retailer_Count
   FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
   GROUP BY [Sales Method]
   Order BY As_Retailer_Count DESC;
 
+-- which Retailers  had the most purchases
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT Retailer , COUNT(DISTINCT[Retailer ID]) AS_Retailer_Count
+     
+  FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
+  GROUP BY Retailer
+  ORDER BY AS_Retailer_Count DESC;
