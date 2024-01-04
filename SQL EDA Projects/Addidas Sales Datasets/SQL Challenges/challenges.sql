@@ -31,7 +31,7 @@ SELECT [Sales Method],COUNT(DISTINCT [Retailer ID]) As_Retailer_Count
   Order BY As_Retailer_Count DESC;
 
 -- which Retailers  had the most purchases
-/****** Script for SelectTopNRows command from SSMS  ******/
+
 SELECT Retailer , COUNT(DISTINCT[Retailer ID]) AS_Retailer_Count
      
   FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
