@@ -20,3 +20,18 @@ SELECT  username
 FROM ig_clone.users
 LEFT JOIN photos ON users.id = photos.user_id
 WHERE photos.id is NULL;
+
+-- we are running  a new contest to get the most likes in  a single photo who won ? --
+SELECT 
+    username,
+    photos.id,
+    photos.image_url, 
+    COUNT(*) AS total
+FROM photos
+INNER JOIN likes
+    ON likes.photo_id = photos.id
+INNER JOIN users
+    ON photos.user_id = users.id
+GROUP BY photos.id
+ORDER BY total DESC
+LIMIT 1;
