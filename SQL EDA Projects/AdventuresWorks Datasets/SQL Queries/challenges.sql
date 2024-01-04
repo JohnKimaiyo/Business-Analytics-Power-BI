@@ -26,3 +26,12 @@ SELECT [DepartmentName],COUNT(DISTINCT [EmployeeNationalIDAlternateKey]) As_Empl
   FROM [AdventureWorksDW2022].[dbo].[DimEmployee]
   GROUP BY DepartmentName
   Order BY As_Employee_Number DESC;
+
+  -- Display the total nummber of Eployees based on marital status --
+  /****** Script for SelectTopNRows command from SSMS  ******/
+SELECT [MaritalStatus],Count(DISTINCT [EmployeeNationalIDAlternateKey] ) As_Employee_Count
+ 
+  FROM [AdventureWorksDW2022].[dbo].[DimEmployee]
+  GROUP BY [MaritalStatus]
+  ORDER BY  As_Employee_Count;
+ 
