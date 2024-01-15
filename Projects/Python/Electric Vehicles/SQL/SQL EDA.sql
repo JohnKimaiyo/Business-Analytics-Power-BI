@@ -13,3 +13,5 @@ SELECT TOP 10 County, SUM([Electric Range]) AS TotalElectricRange
 FROM [Electric Vehicle Population].[dbo].[Electric_Vehicle_Population_Dat$]
 GROUP BY County
 ORDER BY TotalElectricRange DESC
+
+
