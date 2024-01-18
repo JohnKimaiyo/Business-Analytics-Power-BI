@@ -14,3 +14,8 @@ SELECT MAX([ind_rate]) AS Highest_Individual_Electricity_Rate
  /****** What is the Average Industrial Rate ******/
 SELECT AVG([ind_rate]) AS Average_Electricty_Rate
 FROM [U.S. Electric Utility Companies and Rates ].[dbo].['US Electricity Rates$']
+
+
+/****** What is the maximum Residential Rate  ******/
+SELECT MAX([res_rate]) AS Highest_Residential_Electricity_Rate
+FROM [U.S. Electric Utility Companies and Rates ].[dbo].['US Electricity Rates$']
