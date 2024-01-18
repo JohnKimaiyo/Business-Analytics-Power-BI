@@ -43,3 +43,15 @@ GROUP BY
     [state]
 ORDER BY
     total_sum_rate DESC;
+
+/****** Which Servive_Type has been mostly used  ******/
+SELECT service_type, COUNT(service_type) AS service_type_count
+
+
+FROM [U.S. Electric Utility Companies and Rates ].[dbo].['US Electricity Rates$']
+WHERE
+    service_type IN ('Bundled', 'Delivery') -- Include only relevant service types
+GROUP BY
+    service_type
+ORDER BY
+    service_type_count DESC
