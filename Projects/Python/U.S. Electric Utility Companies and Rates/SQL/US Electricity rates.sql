@@ -1,4 +1,4 @@
-/****** What is the maximum Commercial rate  ******/
+/****** What is the maximum Commercial Rates  ******/
 SELECT MAX([comm_rate]) AS Highest_Commercial_Rate
   FROM [U.S. Electric Utility Companies and Rates ].[dbo].['US Electricity Rates$']
 
@@ -7,7 +7,7 @@ SELECT MAX([comm_rate]) AS Highest_Commercial_Rate
 SELECT AVG([comm_rate]) AS Average_Commercial_rate
   FROM [U.S. Electric Utility Companies and Rates ].[dbo].['US Electricity Rates$']
 
-  /****** What is the maximum Individual Rate ******/
+  /****** What is the Maximum Individual Rate ******/
 SELECT MAX([ind_rate]) AS Highest_Individual_Electricity_Rate
  FROM [U.S. Electric Utility Companies and Rates ].[dbo].['US Electricity Rates$']
 
@@ -16,7 +16,7 @@ SELECT AVG([ind_rate]) AS Average_Electricty_Rate
 FROM [U.S. Electric Utility Companies and Rates ].[dbo].['US Electricity Rates$']
 
 
-/****** What is the maximum Residential Rate  ******/
+/****** What is the Maximum Residential Rate  ******/
 SELECT MAX([res_rate]) AS Highest_Residential_Electricity_Rate
 FROM [U.S. Electric Utility Companies and Rates ].[dbo].['US Electricity Rates$']
 
@@ -33,7 +33,7 @@ ORDER BY
     total_sum_rate DESC;
 
 
-/****** What is are the top Ten  most expoensive States in interms of Electricity Prices  ******/
+/****** What is are the top Ten  most expensive States in in terms of Electricity Prices  ******/
 SELECT TOP 10
    [state],
     ROUND(SUM([comm_rate] + [ind_rate]), 0) AS total_sum_rate
