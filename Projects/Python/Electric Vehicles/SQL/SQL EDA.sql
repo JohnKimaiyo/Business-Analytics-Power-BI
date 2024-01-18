@@ -15,3 +15,8 @@ GROUP BY County
 ORDER BY TotalElectricRange DESC
 
 
+--  Provide top ten Cities that  had the hightest Electric range suing SQL ---
+SELECT TOP  10 City,  SUM([Electric Range]) AS Total_Electric_Range
+FROM [Electric Vehicle Population].[dbo].[Electric_Vehicle_Population_Dat$]
+GROUP BY City
+ORDER BY Total_Electric_Range
