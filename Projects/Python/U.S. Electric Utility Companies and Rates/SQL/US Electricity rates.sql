@@ -31,3 +31,15 @@ GROUP BY
     [utility_name]
 ORDER BY
     total_sum_rate DESC;
+
+
+/****** What is are the top Ten  most expoensive States in interms of Electricity Prices  ******/
+SELECT TOP 10
+   [state],
+    ROUND(SUM([comm_rate] + [ind_rate]), 0) AS total_sum_rate
+FROM
+    [U.S. Electric Utility Companies and Rates].[dbo].['US Electricity Rates$']
+GROUP BY
+    [state]
+ORDER BY
+    total_sum_rate DESC;
