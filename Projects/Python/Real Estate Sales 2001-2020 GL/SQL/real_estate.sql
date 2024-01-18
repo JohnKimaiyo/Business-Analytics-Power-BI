@@ -10,3 +10,9 @@ FROM [Real Estate Sales Dataset].[dbo].['Real_Estate_Sales_2001-2020_GL$']
 /****** The highest price the properties sold for  ******/
 SELECT MAX([Sale Amount]) As Highested_price_Properties_sold_for
   FROM [Real Estate Sales Dataset].[dbo].['Real_Estate_Sales_2001-2020_GL$']
+
+
+
+  /****** Average price the properties sold for ******/
+SELECT ROUND(AVG([Sale Amount]),0) As Average_price_Properties_sold_for
+  FROM [Real Estate Sales Dataset].[dbo].['Real_Estate_Sales_2001-2020_GL$']
