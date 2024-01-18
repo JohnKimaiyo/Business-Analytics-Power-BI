@@ -20,3 +20,10 @@ SELECT TOP  10 City,  SUM([Electric Range]) AS Total_Electric_Range
 FROM [Electric Vehicle Population].[dbo].[Electric_Vehicle_Population_Dat$]
 GROUP BY City
 ORDER BY Total_Electric_Range
+
+
+--  Provide top ten Car Make that  had the hightest Electric range suing SQL ---
+SELECT TOP 10 Make , SUM([Electric Range] ) AS Total_Electric_Range
+FROM [Electric Vehicle Population].[dbo].[Electric_Vehicle_Population_Dat$]
+GROUP BY Make
+ORDER BY Total_Electric_Range
