@@ -3,7 +3,7 @@ SELECT AVG([Electric Range]) AS Average_Electric_Range
   FROM [Electric Vehicle Population].[dbo].[Electric_Vehicle_Population_Dat$]
 
   
--- write SQL to get the Maximumelectric range --
+-- write SQL to get the Maximum  electric range --
 SELECT MAX([Electric Range]) AS  Maximum_Electric_Range
   FROM [Electric Vehicle Population].[dbo].[Electric_Vehicle_Population_Dat$]
 
@@ -28,14 +28,14 @@ FROM [Electric Vehicle Population].[dbo].[Electric_Vehicle_Population_Dat$]
 GROUP BY Make
 ORDER BY Total_Electric_Range DESC;
 
---  Provide top ten CaR Model Make that  had the hightest Electric range suing SQL ---
+--  Provide top ten Car Model Make that  had the hightest Electric range suing SQL ---
 SELECT TOP 10 Model, SUM([Electric Range] ) AS Total_Electric_Range
 FROM [Electric Vehicle Population].[dbo].[Electric_Vehicle_Population_Dat$]
 GROUP BY Model
 ORDER BY Total_Electric_Range DESC;
 
 
---  Provide top ten CaR Clean Alternative Fuel Vehicle (CAFV) Eligibility]   that  had the hightest Electric range suing SQL ---
+--  Provide top ten  Clean Alternative Fuel Vehicle (CAFV) Eligibility]   that  had the hightest Electric range suing SQL ---
 SELECT TOP 10
     [Clean Alternative Fuel Vehicle (CAFV) Eligibility],
     SUM([Electric Range]) AS Total_Electric_Range
@@ -47,7 +47,7 @@ ORDER BY
     Total_Electric_Range DESC;
 
 
---  Provide top ten Electric Vehicle Type  that  had the hightest Electric range suing SQL ---
+--  Provide top ten Electric Vehicle Type  that  had the hightest Electric range using  SQL ---
 
 SELECT TOP 10  [Electric Vehicle Type] , SUM ([Electric Range]) AS Total_Electric_Range
      
