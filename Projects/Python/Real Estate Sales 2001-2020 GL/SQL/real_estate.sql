@@ -16,3 +16,11 @@ SELECT MAX([Sale Amount]) As Highested_price_Properties_sold_for
   /****** Average price the properties sold for ******/
 SELECT ROUND(AVG([Sale Amount]),0) As Average_price_Properties_sold_for
   FROM [Real Estate Sales Dataset].[dbo].['Real_Estate_Sales_2001-2020_GL$']
+
+
+
+  /****** What is the top ten Town based on Assessed Values  ******/
+SELECT TOP 10 [Town] ,SUM([Sale Amount]) AS Total_Assessed_Value
+  FROM [Real Estate Sales Dataset].[dbo].['Real_Estate_Sales_2001-2020_GL$']
+  GROUP BY [Town]
+  ORDER BY Total_Assessed_Value DESC;
