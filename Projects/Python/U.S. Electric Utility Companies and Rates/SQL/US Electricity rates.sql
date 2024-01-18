@@ -1,0 +1,3 @@
+/****** What is the maximum commercial rate  ******/
+SELECT MAX([comm_rate]) AS Highest_Commercial_Rate
+  FROM [U.S. Electric Utility Companies and Rates ].[dbo].['US Electricity Rates$']
