@@ -31,3 +31,19 @@ SELECT TOP 10 [Property Type], SUM([Sale Amount]) AS Total_Property_Sales
   FROM [Real Estate Sales Dataset].[dbo].['Real_Estate_Sales_2001-2020_GL$']
   GROUP BY [Property Type]
   ORDER BY Total_Property_Sales DESC;
+
+
+/****** What is the top ten Residential Type based on Property sales across the years ******/
+
+  SELECT TOP 10 
+    [Residential Type],
+    SUM([Sale Amount]) AS Total_Property_Sales_Amount
+FROM 
+    [Real Estate Sales Dataset].[dbo].['Real_Estate_Sales_2001-2020_GL$']
+WHERE 
+    [Residential Type] IS NOT NULL 
+    AND [Sale Amount] IS NOT NULL
+GROUP BY 
+    [Residential Type]
+ORDER BY 
+    Total_Property_Sales_Amount DESC;
