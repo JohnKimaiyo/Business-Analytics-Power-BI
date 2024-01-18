@@ -19,3 +19,9 @@ SELECT TOP 10 [JOB_TITLE] , SUM([ GROSS_PAY ])  AS Total_Salary_Paid
 FROM [Allegheny County Employee Salaries].[dbo].['Allegheny  county salaries$']
 GROUP BY [JOB_TITLE]
 ORDER BY Total_Salary_Paid DESC;
+
+/****** Which top six Ethnicities had the highest salaries  ******/
+SELECT TOP 6 [ETHNICITY] ,  SUM([ GROSS_PAY ]) AS Total_Salary_Paid
+FROM [Allegheny County Employee Salaries].[dbo].['Allegheny  county salaries$']
+GROUP BY [ETHNICITY]
+ORDER BY Total_Salary_Paid
