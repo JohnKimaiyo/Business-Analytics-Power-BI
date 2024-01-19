@@ -18,3 +18,9 @@ SELECT TOP 10 [State] , SUM([Deaths]) AS Total_Deaths
   FROM [NCHS - Leading Causes of Death: United States].[dbo].['NCHS_-_Leading_Causes_of_Death_$']
   GROUP BY [State]
   ORDER BY Total_Deaths DESC;
+
+  /****** Whats is the top ten Years with the highest deaths   ******/
+SELECT TOP 10 [Year], sum([Deaths]) AS Total_Sum_Deaths
+  FROM [NCHS - Leading Causes of Death: United States].[dbo].['NCHS_-_Leading_Causes_of_Death_$']
+  GROUP BY [Year]
+  ORDER BY Total_Sum_Deaths DESC;
