@@ -1,10 +1,6 @@
--- which  Region had the most retailers ---
-
-SELECT Region ,COUNT(DISTINCT [Retailer ID]) As_Retailer_Count
-
+-- Whats is the highest sales amount --
+SELECT MAX([Total Sales]) Highest_Sales_Amount
   FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
-  GROUP BY Region
-  Order BY As_Retailer_Count Desc;
 
 -- which  State  had the most retailers ---
 
