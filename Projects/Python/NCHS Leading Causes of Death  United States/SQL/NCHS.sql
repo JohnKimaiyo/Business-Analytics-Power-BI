@@ -6,3 +6,9 @@ FROM [NCHS - Leading Causes of Death: United States].[dbo].['NCHS_-_Leading_Caus
 SELECT AVG([Deaths]) AS  Average_Number_of_Deaths
 FROM [NCHS - Leading Causes of Death: United States].[dbo].['NCHS_-_Leading_Causes_of_Death_$']
   
+
+  /****** Whats is the top ten causes of death  ******/
+SELECT TOP 10 [Cause Name] ,  SUM([Deaths]) AS Total_Sum_Of_Death
+FROM [NCHS - Leading Causes of Death: United States].[dbo].['NCHS_-_Leading_Causes_of_Death_$']
+GROUP BY [Cause Name] 
+ORDER BY Total_Sum_Of_Death DESC;
