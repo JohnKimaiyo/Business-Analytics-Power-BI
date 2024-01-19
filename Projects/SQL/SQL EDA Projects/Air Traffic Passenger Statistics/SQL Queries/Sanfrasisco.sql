@@ -20,8 +20,14 @@ GROUP BY [GEO Summary]
 ORDER BY Sum_Of_Passenger_Count DESC;
 
 
--- Display the top destinationsbased on passegnger numbers --
+-- Display the top destinations based on passenger numbers --
 SELECT TOP 10 [GEO Region], SUM([Passenger Count]) AS Sum_of_Passanger_Numbers
 FROM [San Francisco International Airport Air Traffic].[dbo].[Air_Traffic_Passenger_Statistic$]
 GROUP BY [GEO Region]
 ORDER BY  Sum_of_Passanger_Numbers DESC;
+
+-- Display which Terminal had the highest passenger numbers --
+SELECT TOP 10 [Terminal], sum([Passenger Count]) AS Sum_of_Passenger_Numbers 
+FROM [San Francisco International Airport Air Traffic].[dbo].[Air_Traffic_Passenger_Statistic$]
+GROUP BY [Terminal]
+ORDER BY Sum_of_Passenger_Numbers DESC;
