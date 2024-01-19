@@ -7,7 +7,7 @@ SELECT MAX([Total Sales]) Highest_Sales_Amount
 SELECT AVG([Total Sales]) Average_Sales_Amount
   FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
 
-  /****** What are the top 4 Reatilers in terms of sales  ******/
+  /****** What are the top 4 Retailers in terms of sales  ******/
 SELECT TOP 4 [Retailer ID], SUM([Total Sales]) AS Sum_of_Sales
  FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
  GROUP BY [Retailer ID]
