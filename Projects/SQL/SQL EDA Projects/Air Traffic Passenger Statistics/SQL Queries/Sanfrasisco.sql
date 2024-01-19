@@ -1,12 +1,12 @@
-/****** Whats is the highest the Passenger Count  ******/
+/****** Whats is the highest the passenger numbers  ******/
 SELECT MAX([Passenger Count]) AS Highest_Passenger_Count
 FROM [San Francisco International Airport Air Traffic].[dbo].[Air_Traffic_Passenger_Statistic$]
 
-/******  Whats is the Average the Passenger Count   ******/
+/******  Whats is the Average the passenger numbers   ******/
 SELECT AVG([Passenger Count]) AS Average_Passenger_Count
 FROM [San Francisco International Airport Air Traffic].[dbo].[Air_Traffic_Passenger_Statistic$]
 
-/****** List the top ten Ailrines based on passenger count ******/
+/****** List the top ten Airlines based on passenger numbers ******/
 SELECT TOP 10 [Operating Airline],  SUM([Passenger Count]) AS Sum_Passenger_Count
 FROM [San Francisco International Airport Air Traffic].[dbo].[Air_Traffic_Passenger_Statistic$]
 GROUP BY [Operating Airline]
