@@ -32,3 +32,9 @@ SELECT TOP 10 [City], SUM([Total Sales])  AS Sum_of_Sales
 FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
 GROUP BY [City]
 ORDER BY  Sum_of_Sales
+
+/****** Whats are the top 6 Cities in terms of sales  ******/
+SELECT TOP 6 [Product], SUM([Total Sales]) AS Sum_of_Sales
+FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
+GROUP BY [Product]
+ORDER BY Sum_of_Sales
