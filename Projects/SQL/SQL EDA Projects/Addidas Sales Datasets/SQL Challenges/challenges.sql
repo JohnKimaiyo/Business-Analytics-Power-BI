@@ -44,3 +44,10 @@ SELECT TOP 6 [Product],  SUM([Total Sales]) AS Sum_of_Sales
 FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
 GROUP BY [Product]
 ORDER BY Sum_of_Sales
+
+
+/****** Which sales method ahd the highest sales  ******/
+SELECT TOP 3  [Sales Method] ,  SUM([Total Sales]) AS Sum_of_Sales
+FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
+GROUP BY [Sales Method]
+ORDER BY Sum_of_Sales
