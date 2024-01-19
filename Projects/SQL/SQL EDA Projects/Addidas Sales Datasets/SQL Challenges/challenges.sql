@@ -25,3 +25,10 @@ SELECT TOP 10 [State],  SUM([Total Sales])  AS Sum_of_Sales
 FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
 GROUP BY [State]
 ORDER BY Sum_of_Sales
+
+
+/****** Whats are the top 10 Cities in terms of sales  ******/
+SELECT TOP 10 [City], SUM([Total Sales])  AS Sum_of_Sales
+FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
+GROUP BY [City]
+ORDER BY  Sum_of_Sales
