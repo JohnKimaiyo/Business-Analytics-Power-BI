@@ -13,3 +13,9 @@ SELECT TOP 10  [County] ,  SUM([Square Footage]) AS Total_Square_Feet
   FROM [State of NewYork Retail Food Stores].[dbo].[Retail_Food_Stores$]
   GROUP BY [County]
   ORDER BY  Total_Square_Feet DESC;
+
+  /******  What are the top ten Establishment Type with the highest square feet  ******/
+SELECT TOP 10 [Establishment Type], SUM([Square Footage]) AS Total_Square_Feet
+  FROM [State of NewYork Retail Food Stores].[dbo].[Retail_Food_Stores$]
+  GROUP BY  [Establishment Type]
+  ORDER BY Total_Square_Feet DESC;
