@@ -12,3 +12,9 @@ SELECT TOP 4 [Retailer ID], SUM([Total Sales]) AS Sum_of_Sales
  FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
  GROUP BY [Retailer ID]
  ORDER BY Sum_of_Sales;
+
+ /****** What are the top 5 Regions in terms of sales  ******/
+SELECT TOP 10 [Region], SUM([Total Sales]) AS Sum_of_Sales
+FROM [Addidas Sales Datasets].[dbo].['Data Sales Adidas$']
+GROUP BY  [Region]
+ORDER BY  Sum_of_Sales
